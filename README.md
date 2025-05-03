@@ -1,3 +1,13 @@
+# This repo
+This is a fork of a fork of fork, etc..
+
+Kudos to the greater than me people that came before me. My contribution is close to zero but
+I have been an user for a long time and need to still to move to Graylog6.
+
+While I am leaving the rest of the README.md as-is, some/most of it may not make sense at all for you.
+
+The latest to have released the provider and from which I forked is one-2-one, but I have used predecessors as well in the past
+
 # Terraform Provider: Graylog
 This is a Terraform provider for managing resources within [Graylog](https://docs.graylog.org/).
 
