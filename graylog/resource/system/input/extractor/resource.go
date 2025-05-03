@@ -76,10 +76,8 @@ func Resource() *schema.Resource {
 							Required: true,
 						},
 						"config": {
-							Type:             schema.TypeString,
-							Required:         true,
-							DiffSuppressFunc: util.SchemaDiffSuppressJSONString,
-							ValidateFunc:     util.ValidateIsJSON,
+							Type:     schema.TypeMap,
+							Required: true,
 						},
 					},
 				},

@@ -1,10 +1,12 @@
+/* ex: set filetype=go fenc=utf-8 noexpandtab ts=4 sw=4 : */
 package extractor
 
 import (
 	"context"
-	"net/http"
-
+	"github.com/one-2-one/terraform-provider-graylog/graylog/util"
 	"github.com/suzuki-shunsuke/go-httpclient/httpclient"
+	"log"
+	"net/http"
 )
 
 type Client struct {
@@ -24,10 +26,14 @@ func (cl Client) Get(ctx context.Context, inputID, id string) (map[string]interf
 func (cl Client) Create(
 	ctx context.Context, inputID string, data map[string]interface{},
 ) (map[string]interface{}, *http.Response, error) {
+	log.Printf("shk3bq4d client create 0")
 	body := map[string]interface{}{}
+	url := "/system/inputs/" + inputID + "/extractors"
+	log.Printf("shk3bq4d Data for POST %s", url)
+	util.MrDebug(data)
 	resp, err := cl.Client.Call(ctx, httpclient.CallParams{
 		Method:       "POST",
-		Path:         "/system/inputs/" + inputID + "/extractors",
+		Path:         url,
 		RequestBody:  data,
 		ResponseBody: &body,
 	})

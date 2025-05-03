@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"log"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 
@@ -24,6 +25,7 @@ var stateUpgraderV1 = schema.StateUpgrader{
 	Version: 0,
 	Type:    extractorResourceV0().CoreConfigSchema().ImpliedType(),
 	Upgrade: func(_ context.Context, rawState map[string]interface{}, meta interface{}) (map[string]interface{}, error) {
+		log.Printf("shk3bq4d state_upgrader 0")
 		inputID := rawState[keyInputID].(string)
 		extractorID := rawState[keyID].(string)
 
@@ -77,17 +79,27 @@ var stateUpgraderV1 = schema.StateUpgrader{
 		}
 		rawState[keyExtractorConfig] = string(b)
 
+		log.Printf("shk3bq4d state_upgrader 1")
 		if a, ok := rawState[keyConverters]; ok {
+			log.Printf("shk3bq4d state_upgrader 2")
 			list := a.([]interface{})
+			log.Printf("shk3bq4d state_upgrader 3")
 			for i, e := range list {
+				log.Printf("shk3bq4d state_upgrader 4")
 				if err := convert.OneSizeListToJSON(e.(map[string]interface{}), keyConfig); err != nil {
+					log.Printf("shk3bq4d state_upgrader 5")
 					return nil, err
 				}
+				log.Printf("shk3bq4d state_upgrader 6")
 				list[i] = e
+				log.Printf("shk3bq4d state_upgrader 7")
 			}
+			log.Printf("shk3bq4d state_upgrader 8")
 			rawState[keyConverters] = list
+			log.Printf("shk3bq4d state_upgrader 9")
 		}
 
+		log.Printf("shk3bq4d state_upgrader 10")
 		return rawState, nil
 	},
 }

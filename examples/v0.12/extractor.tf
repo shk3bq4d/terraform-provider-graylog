@@ -52,11 +52,11 @@ resource "graylog_extractor" "test_regex" {
   converters {
     type = "date"
 
-    config = jsonencode({
+    config = {
       date_format = "yyyy/MM/ddTHH:mm:ss"
       time_zone   = "Japan"
       locale      = "en"
-    })
+    }
   }
 }
 
@@ -90,7 +90,7 @@ resource "graylog_extractor" "http_response_code" {
 
   converters {
     type   = "numeric"
-    config = "{}"
+    config = {}
   }
 
   extractor_config = jsonencode({

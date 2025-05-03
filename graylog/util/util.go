@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"log"
 	"net/http"
 	"strings"
 
@@ -97,4 +98,15 @@ func SetDefaultValue(data map[string]interface{}, key string, value interface{})
 	if _, ok := data[key]; !ok {
 		data[key] = value
 	}
+}
+
+func MrDebug(data map[string]interface{}) error {
+	jsonBytes, err := json.MarshalIndent(data, "", "  ")
+	if err != nil {
+		log.Printf("Error marshalling data: %v", err)
+		return err
+	}
+
+	log.Printf("shk3bq4d Data:\n%s", string(jsonBytes))
+	return nil
 }

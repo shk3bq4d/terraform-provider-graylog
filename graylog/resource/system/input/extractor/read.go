@@ -3,6 +3,7 @@ package extractor
 import (
 	"context"
 	"fmt"
+	"log"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 
@@ -11,6 +12,7 @@ import (
 )
 
 func read(d *schema.ResourceData, m interface{}) error {
+	log.Printf("shk3bq4d read 0")
 	ctx := context.Background()
 	cl, err := client.New(m)
 	if err != nil {
