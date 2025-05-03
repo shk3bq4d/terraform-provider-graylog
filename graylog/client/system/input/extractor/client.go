@@ -3,7 +3,7 @@ package extractor
 
 import (
 	"context"
-	"github.com/one-2-one/terraform-provider-graylog/graylog/util"
+	"github.com/shk3bq4d/terraform-provider-graylog/graylog/util"
 	"github.com/suzuki-shunsuke/go-httpclient/httpclient"
 	"log"
 	"net/http"

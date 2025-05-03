@@ -8,7 +8,7 @@ build:
 	@echo "In order to have Terraform pick this up you will need to add the following to your $$HOME/.terraformrc file:"
 	@echo "  provider_installation {"
 	@echo "    dev_overrides {"
-	@echo "      \"one-2-one/graylog\" = \"$(shell go env GOPATH)/bin\""
+	@echo "      \"shk3bq4d/graylog\" = \"$(shell go env GOPATH)/bin\""
 	@echo "    }"
 	@echo "    direct {}"
 	@echo "  }"

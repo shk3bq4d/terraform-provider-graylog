@@ -11,7 +11,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/suzuki-shunsuke/flute/v2/flute"
 
-	"github.com/one-2-one/terraform-provider-graylog/graylog/testutil"
+	"github.com/shk3bq4d/terraform-provider-graylog/graylog/testutil"
 )
 
 func TestAccUser(t *testing.T) {

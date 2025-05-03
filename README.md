@@ -2,7 +2,7 @@
 This is a Terraform provider for managing resources within [Graylog](https://docs.graylog.org/).
 
 ## Getting Started
-As this provider is published to the public [Terraform Registry](https://registry.terraform.io/providers/one-2-one/graylog),
+As this provider is published to the public [Terraform Registry](https://registry.terraform.io/providers/shk3bq4d/graylog),
 you can install it like so (for Terraform 0.14+):
 ```hcl
 provider "graylog" {
@@ -13,14 +13,14 @@ provider "graylog" {
 terraform {
   required_providers {
     graylog = {
-      source  = "one-2-one/graylog"
+      source  = "shk3bq4d/graylog"
     }
   }
 }
 ```
 
 For more detailed instructions and documentation on the resources and data sources supported, please go to
-[Terraform Registry](https://registry.terraform.io/providers/one-2-one/graylog/latest/docs).
+[Terraform Registry](https://registry.terraform.io/providers/shk3bq4d/graylog/latest/docs).
 
 ## Maintenance
 This provider is maintained during free time, so if you are interested in helping to develop this further, you

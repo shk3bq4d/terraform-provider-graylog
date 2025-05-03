@@ -7,8 +7,8 @@ import (
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 
-	"github.com/one-2-one/terraform-provider-graylog/graylog/client"
-	"github.com/one-2-one/terraform-provider-graylog/graylog/util"
+	"github.com/shk3bq4d/terraform-provider-graylog/graylog/client"
+	"github.com/shk3bq4d/terraform-provider-graylog/graylog/util"
 )
 
 func read(d *schema.ResourceData, m interface{}) error {

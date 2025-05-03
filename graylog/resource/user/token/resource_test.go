@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/suzuki-shunsuke/flute/v2/flute"
 
-	"github.com/one-2-one/terraform-provider-graylog/graylog/testutil"
+	"github.com/shk3bq4d/terraform-provider-graylog/graylog/testutil"
 )
 
 const testUserId = "62aca4d45036cb55b711f258"

@@ -3,7 +3,7 @@ package stream
 import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 
-	"github.com/one-2-one/terraform-provider-graylog/graylog/convert"
+	"github.com/shk3bq4d/terraform-provider-graylog/graylog/convert"
 )
 
 const (
